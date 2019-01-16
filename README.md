@@ -1,4 +1,5 @@
-#(1) Program Names and Information
+(1) Program Names and Information
+------------------------------------
 
 extract-business-info-and-services.py (Extract the basic business information & services provided from the 1000 html pages provided)
 
@@ -10,17 +11,17 @@ extract-contact-us-email.py (Extracts the contact-us and email id information)
 		
 ####################################################################	
 			
-#(2) Logic for email ID and Contact Us 
+(2) Logic for email ID and Contact Us 
+------------------------------------
+
 
 Logic used for email ID extraction:
-------------------------------------
 
 Logic#1 - from the HTML page, find all the text which matches the regex of the email "[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+". 
 Logic#2 - In some places in the html code, mailto: or mailto:// is used. Email ID has been extracted basis the same
 
 
 Logic used for contact-us extraction:
---------------------------------------
 
 Logic#1: Extracted all the anchor tags from the html text and if the word 'contact' or 'info' is present in the text of the anchor tag OR the href link (URL). Then extract the URL (or sub-domain) from the link. Basis this build the full URL
 
@@ -33,7 +34,9 @@ Note:
 
 ####################################################################
 
-#(3) Overall Logic Used
+(3) Overall Logic Used
+------------------------------------
+
 
 Step 1: Parse thru all the 1000 web pages (downloaded and provided to us) & extract all the business information and the services. (extract-business-info-and-services.py
 
